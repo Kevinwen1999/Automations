@@ -7,21 +7,21 @@ import time
 pyautogui.PAUSE = 0.01
 
 # Path to the image you want to detect and click on
-entryPointPath = "entryPoint.png"
-startWorkPath = "startWork.png"
-potatoPlacePath = "potatoImage.png"
-fullyFriedPath = "fullyFried.png"
-knifePath = 'knife.png'
-chefPath = 'chef3.png'
-cucumberPath = 'cucumber.png'
-sourCreamPath = 'sourCream.png'
-customerPath = 'shawarmaRequest.png'
-doughStackPath = 'doughStack.png'
-wrapStackPath = 'wrapStack.png'
-unWrappedPath = 'unWrapped.png'
-wrappedPath = 'wrapped2.png'
-deskPath = 'desk.png'
-wallPath = 'wall.png'
+entryPointPath = "./shawarmaCaptureImages/entryPoint.png"
+startWorkPath = "./shawarmaCaptureImages/startWork.png"
+potatoPlacePath = "./shawarmaCaptureImages/potatoImage.png"
+fullyFriedPath = "./shawarmaCaptureImages/fullyFried.png"
+knifePath = './shawarmaCaptureImages/knife.png'
+chefPath = './shawarmaCaptureImages/chef3.png'
+cucumberPath = './shawarmaCaptureImages/cucumber.png'
+sourCreamPath = './shawarmaCaptureImages/sourCream.png'
+customerPath = './shawarmaCaptureImages/shawarmaRequest.png'
+doughStackPath = './shawarmaCaptureImages/doughStack.png'
+wrapStackPath = './shawarmaCaptureImages/wrapStack.png'
+unWrappedPath = './shawarmaCaptureImages/unWrapped.png'
+wrappedPath = './shawarmaCaptureImages/wrapped2.png'
+deskPath = './shawarmaCaptureImages/desk.png'
+wallPath = './shawarmaCaptureImages/wall.png'
 
 
 entered = False
