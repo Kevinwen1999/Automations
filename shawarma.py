@@ -109,6 +109,7 @@ def dragBetweenTwoLocation(location1, location2, numSteps):
     delta_y = (center_y2 - center_y1) / numSteps
 
     pyautogui.moveTo(center_x1, center_y1)
+    time.sleep(0.1)
     pyautogui.mouseDown()
     time.sleep(0.05)
 
@@ -116,7 +117,7 @@ def dragBetweenTwoLocation(location1, location2, numSteps):
         step_x = center_x1 + delta_x * (i + 1)
         step_y = center_y1 + delta_y * (i + 1)
         pyautogui.moveTo(step_x, step_y)
-        time.sleep(0.05)
+        time.sleep(0.07)
     
     pyautogui.mouseUp()
 
@@ -186,7 +187,6 @@ try:
 
 
     while True:
-        time.sleep(0.4)
         
         """ if not entered:
             try:
@@ -215,12 +215,13 @@ try:
          # Detect if customer request exist
         if shawarmaCount > 0:
             try:
+                time.sleep(0.1)
                 customer = pyautogui.locateOnScreen(customerPath, confidence=0.5)
                 wrapped = pyautogui.locateOnScreen(wrappedPath, confidence=0.7)
-                dragBetweenTwoLocation(wrapped, customer, 5)
+                dragBetweenTwoLocation(wrapped, customer, 3)
                 time.sleep(0.02)
-                clickRelativeToCenter(customer, 0, 0, 0)
-                time.sleep(0.7)
+                clickRelativeToCenter(customer, -50, 0, 0.05)
+                
                 dragClickRelativeToCenter(desk, -400, 0, 400, 0)
                 dragClickRelativeToCenter(desk, -400, 0, 400, 0)
                 print("delivery complete")
@@ -313,10 +314,11 @@ try:
                 cucumberCount -= 3
                 sourCreamCount -= 3
                 dragRelativeToCenter(doughStack, 300, 0, 300, -110)
+                time.sleep(0.05)
                 wrapStack = pyautogui.locateOnScreen(wrapStackPath, confidence=0.8)
                 unWrapped = pyautogui.locateOnScreen(unWrappedPath, confidence=0.9)
                 dragBetweenTwoLocation(wrapStack, unWrapped, 5)
-                clickRelativeToCenter(unWrapped, 0, -50, 0)
+                clickRelativeToCenter(unWrapped, -50, 0, 0.1)
                 shawarmaCount += 1
                 continue
             except:
